@@ -1,13 +1,9 @@
 import { createContext, useState } from 'react';
-
-type Currency = {
-  title: string;
-  value: string;
-};
+import { SelectArgs } from '../../../widgets';
 
 type CurrencyContextType = {
-  currency: Currency;
-  setCurrency: (currency: Currency) => void;
+  currency: SelectArgs;
+  setCurrency: (currency: SelectArgs) => void;
   isOpenedSelect: boolean;
   setIsOpenedSelect: (isOpened: boolean) => void;
 };

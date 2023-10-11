@@ -13,8 +13,9 @@ export const Header = () => {
   const selectedCurrency = findSelectedCurrency(currency.value);
 
   const handleCurrencySelect = (value: string) => {
-    if (value) {
-      setCurrency(findSelectedCurrency(value));
+    const currency = findSelectedCurrency(value);
+    if (currency) {
+      setCurrency(currency);
     }
   };
 
