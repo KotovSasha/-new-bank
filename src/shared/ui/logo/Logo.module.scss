@@ -1,0 +1,20 @@
+@import '../../styles/index.scss';
+
+.logo-container {
+  display: flex;
+  gap: 10px;
+
+  .main-text {
+    font-size: 96px;
+    text-shadow: 0px 4px 4px $text_shadow;
+    font-weight: 400;
+  }
+
+  .lateral-text {
+    width: 90px;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+  }
+}

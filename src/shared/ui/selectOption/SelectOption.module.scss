@@ -1,0 +1,11 @@
+@import '../../styles/index.scss';
+
+.option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 43px;
+  padding: 5px;
+  background-color: $bg_white;
+  cursor: pointer;
+}

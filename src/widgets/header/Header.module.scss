@@ -1,0 +1,19 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 40vh;
+  margin: 0 29px;
+
+  .select-container {
+    width: 181px;
+  }
+
+  @media screen and (max-width: 510px) {
+    .logo-container {
+      margin: 0 auto;
+    }
+    .image {
+      display: none;
+    }
+  }
+}
