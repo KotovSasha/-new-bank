@@ -20,8 +20,8 @@ export const CurrencyContext = createContext<CurrencyContextType>({
 });
 
 export const CurrencyProvider = ({ children }: CurrencyProviderProps) => {
-  const [currency, setCurrency] = useState({ title: 'RUB', value: 'Russian Ruble' });
-  const [isOpenedSelect, setIsOpenedSelect] = useState(false);
+  const [currency, setCurrency] = useState<SelectArgs>({ title: 'RUB', value: 'Russian Ruble' });
+  const [isOpenedSelect, setIsOpenedSelect] = useState<boolean>(false);
 
   return (
     <CurrencyContext.Provider value={{ currency, setCurrency, isOpenedSelect, setIsOpenedSelect }}>

@@ -7,7 +7,7 @@ export const MainPage = () => {
   const { currency, isOpenedSelect } = useContext(CurrencyContext);
   return (
     <main className={cn(styles['main-container'], { [styles['active-select']]: isOpenedSelect })}>
-      <p className={styles.currency}>{currency?.value}</p>
+      <p className={styles.currency}>{currency.value}</p>
     </main>
   );
 };

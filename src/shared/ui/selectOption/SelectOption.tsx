@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, memo } from 'react';
 import styles from './SelectOption.module.scss';
 
 export type Option = {
@@ -11,7 +11,7 @@ type OptionProps = {
   onClick: (value: Option['value']) => void;
 };
 
-export const SelectOption = (props: OptionProps) => {
+export const SelectOption = memo((props: OptionProps) => {
   const {
     option: { value, title },
     onClick,
@@ -34,4 +34,4 @@ export const SelectOption = (props: OptionProps) => {
       {title}
     </li>
   );
-};
+});

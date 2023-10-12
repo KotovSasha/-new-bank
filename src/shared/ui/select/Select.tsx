@@ -1,25 +1,25 @@
-import { useRef, MouseEventHandler } from 'react';
+import { useRef, MouseEventHandler, useCallback } from 'react';
 import { ChevronDown, useOutsideClick } from '../..';
 import { Option, SelectOption } from '../selectOption';
 import styles from './Select.module.scss';
 
-type SelectProps = {
+interface SelectProps {
   selected: Option | null;
   options: Option[];
   placeholder?: string;
   isOpen: boolean;
   setIsOpen: (arg: boolean) => void;
   onChange?: (selected: Option['value']) => void;
-};
+}
 
 export const Select = (props: SelectProps) => {
   const { options, placeholder, selected, isOpen, setIsOpen, onChange } = props;
   const rootRef = useRef<HTMLDivElement>(null);
 
-  const handleOptionClick = (value: Option['value']) => {
+  const handleOptionClick = useCallback((value: Option['value']) => {
     setIsOpen(false);
     onChange?.(value);
-  };
+  }, []);
 
   const handlePlaceHolderClick: MouseEventHandler<HTMLDivElement> = () => {
     setIsOpen(!isOpen);
@@ -40,7 +40,7 @@ export const Select = (props: SelectProps) => {
         {selected?.title || placeholder}
       </div>
       {isOpen && (
-        <ul className={styles.select}>
+        <ul className={styles.select} role="list">
           {options.map((option) => (
             <SelectOption key={option.value} option={option} onClick={handleOptionClick} />
           ))}
