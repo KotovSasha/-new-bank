@@ -1,0 +1,25 @@
+@import '../../shared/styles/index.scss';
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg_black;
+  height: 77vh;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+
+  .currency {
+    font-size: 96px;
+    color: $text_white;
+    text-align: center;
+    @media screen and (max-width: 350px) {
+      font-size: 64px;
+    }
+  }
+}
+.active-select {
+  height: 70vh;
+}
