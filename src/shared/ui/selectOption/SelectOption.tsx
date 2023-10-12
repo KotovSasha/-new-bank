@@ -11,7 +11,7 @@ type OptionProps = {
   onClick: (value: Option['value']) => void;
 };
 
-export const SelectOption = memo((props: OptionProps) => {
+export const SelectOption = memo(function SelectOption(props: OptionProps) {
   const {
     option: { value, title },
     onClick,
